@@ -82,91 +82,43 @@
     .brand-mark { width:2.1rem; height:2.1rem; border-radius:.75rem; display:grid; place-items:center; background:linear-gradient(135deg, var(--color-primary), color-mix(in srgb, var(--color-primary) 65%, white)); color:var(--color-text-inverse); box-shadow:var(--shadow-sm); font-size:.92rem; font-weight:800; }
     .nav-links { display:flex; align-items:center; gap:var(--space-4); color:var(--color-text-muted); font-size:var(--text-sm); }
     .theme-toggle { width:44px; height:44px; border:1px solid var(--color-border); border-radius:var(--radius-full); display:grid; place-items:center; background:var(--color-surface); }
-    .hero { padding:clamp(4rem,8vw,7rem) 0 3.5rem; }
- .hero-grid {
-  display: grid;
-  grid-template-columns: 110px minmax(0, 1fr);
-  gap: var(--space-6);
-  align-items: start;
-}
+    <section class="hero" id="top">
+  <div class="container hero-grid">
+    <div class="hero-media">
+      <div class="hero-portrait-wrap">
+        <img class="hero-portrait" src="DEIN_BILD_HIER" alt="Marius Klaus" />
+      </div>
+    </div>
 
-.hero-portrait-wrap {
-  width: 80px;
-  height: 100px;
-  overflow: hidden;
-  justify-self: start;
-  margin-top: var(--space-6);
-}
+    <aside class="hero-side" aria-label="Kurzprofil">
+      <div>
+        <div class="eyebrow">Agile Project Manager · Kundenberatung · Digitale Projekte</div>
+        <h1>Marius Klaus</h1>
+        <p class="lead">Agile Project Manager mit Erfahrung in Kundenberatung, Projektsteuerung und digitaler Zusammenarbeit in schnelllebigen Teams.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#kontakt">Kontakt aufnehmen</a>
+          <a class="btn btn-secondary" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+      </div>
 
-.hero-portrait {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center top;
-  display: block;
-  border-radius: 1.2rem;
-  border: 1px solid var(--color-border);
-  box-shadow: var(--shadow-md);
-  background: var(--color-surface);
-}
+      <div class="metric-card">
+        <div class="eyebrow">Kurzprofil</div>
+        <div class="metric-list">
+          <div class="metric"><strong>Projektverantwortung</strong><span>Eigene Kundenprojekte, Priorisierung, Reporting und verbindliche Abstimmung mit Stakeholdern.</span></div>
+          <div class="metric"><strong>Kundenberatung</strong><span>Jour-fixe, Jahresgespräche, Erwartungsmanagement und verständliche Kommunikation auf Augenhöhe.</span></div>
+          <div class="metric"><strong>Agiles Arbeiten</strong><span>Scrum-orientierte Zusammenarbeit, strukturierte Planung, kontinuierliche Verbesserung und digitale Tools.</span></div>
+          <div class="metric"><strong>Tools</strong><span>Jira, Confluence, Asana, Trello, Slack, Looker Studio, Google Analytics und Microsoft 365.</span></div>
+        </div>
+      </div>
 
-    h2 { font-size:var(--text-xl); margin-bottom:var(--space-4); }
-    h3 { font-size:var(--text-lg); margin-bottom:var(--space-3); }
-    .lead { font-size:clamp(1.06rem,1rem + .35vw,1.22rem); color:var(--color-text-muted); max-width:62ch; }
-    .hero-actions { display:flex; flex-wrap:wrap; gap:var(--space-3); margin-top:var(--space-6); }
-    .hero-side { display:grid; gap:var(--space-4); }
-    .metric-card, .card, .timeline-item, .cert-card, .contact-card, .profile-card { background:linear-gradient(180deg, var(--color-surface), var(--color-surface-2)); border:1px solid var(--color-border); border-radius:var(--radius-xl); box-shadow:var(--shadow-md); }
-    .metric-card { padding:var(--space-6); }
-    .metric-list { display:grid; gap:var(--space-4); }
-    .metric strong { display:block; font-size:1.05rem; margin-bottom:.15rem; }
-    .metric span { color:var(--color-text-muted); font-size:var(--text-sm); }
-    section { padding:clamp(3.3rem,7vw,5.5rem) 0; }
-    .section-head { display:grid; grid-template-columns:.82fr 1.18fr; gap:var(--space-10); align-items:end; margin-bottom:var(--space-8); }
-    .section-copy { color:var(--color-text-muted); max-width:62ch; }
-    .profile-layout { display:grid; grid-template-columns:.72fr 1.28fr; gap:var(--space-8); align-items:start; }
-    .profile-card { padding:var(--space-6); position:sticky; top:100px; }
-    .portrait-wrap { width:min(100%, 320px); margin:0 auto var(--space-5); }
-    .portrait { width:100%; aspect-ratio:4/5; object-fit:cover; border-radius:1.4rem; border:1px solid var(--color-border); box-shadow:var(--shadow-lg); }
-    .profile-card p { color:var(--color-text-muted); font-size:var(--text-sm); }
-    .quick-facts { display:grid; gap:var(--space-3); margin-top:var(--space-5); }
-    .quick-facts div { padding:var(--space-3) 0; border-top:1px solid var(--color-divider); }
-    .grid-3 { display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:var(--space-5); }
-    .card { padding:var(--space-6); }
-    .card p { color:var(--color-text-muted); }
-    .timeline { display:grid; gap:var(--space-5); }
-    .timeline-item { padding:var(--space-6); }
-    .timeline-top { display:flex; justify-content:space-between; gap:var(--space-3); align-items:flex-start; margin-bottom:var(--space-4); flex-wrap:wrap; }
-    .role { font-size:1.08rem; font-weight:700; }
-    .meta { color:var(--color-text-muted); font-size:var(--text-sm); }
-    .timeline ul { padding-left:1.2rem; color:var(--color-text-muted); display:grid; gap:.55rem; }
-    .timeline li::marker { color:var(--color-primary); }
-    .cert-grid { display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:var(--space-5); }
-    .cert-card { padding:var(--space-6); }
-    .cert-label { display:inline-flex; padding:.4rem .7rem; border-radius:var(--radius-full); background:color-mix(in srgb, var(--color-primary) 16%, transparent); color:var(--color-primary); font-size:var(--text-xs); font-weight:700; margin-bottom:var(--space-4); }
-    .tool-grid { display:grid; grid-template-columns:repeat(4, minmax(0,1fr)); gap:var(--space-4); }
-    .tool { padding:1rem 1.05rem; border:1px solid var(--color-border); border-radius:var(--radius-lg); background:var(--color-surface); color:var(--color-text-muted); font-size:var(--text-sm); }
-    .contact-card { padding:var(--space-8); display:grid; grid-template-columns:1.1fr .9fr; gap:var(--space-6); align-items:center; }
-    .contact-actions { display:flex; flex-wrap:wrap; gap:var(--space-3); margin-top:var(--space-5); }
-    .contact-meta { display:grid; gap:var(--space-3); color:var(--color-text-muted); font-size:var(--text-sm); }
-    footer { padding:var(--space-8) 0 var(--space-10); color:var(--color-text-faint); font-size:var(--text-sm); }
-    @media (max-width: 1040px) {
-      .hero-grid, .section-head, .profile-layout, .contact-card { grid-template-columns:1fr; }
-      .profile-card { position:static; }
-      .grid-3 { grid-template-columns:1fr; }
-      .tool-grid { grid-template-columns:repeat(2, minmax(0,1fr)); }
-    }
-    @media (max-width: 720px) {
-      .nav { min-height:66px; }
-      .nav-links a { display:none; }
-      .hero { padding-top:3rem; }
-      .cert-grid, .tool-grid { grid-template-columns:1fr; }
-      .metric-card, .card, .timeline-item, .cert-card, .contact-card, .profile-card { padding:var(--space-5); }
-      .hero-actions, .contact-actions { flex-direction:column; align-items:stretch; }
-      .btn { width:100%; }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after { animation:none !important; transition:none !important; scroll-behavior:auto !important; }
-    }
+      <div style="display:flex;flex-wrap:wrap;gap:.75rem;">
+        <span class="tag">Verfügbar für digitale Projektrollen</span>
+        <span class="tag">Dresden / Remote</span>
+      </div>
+    </aside>
+  </div>
+</section>
+
   </style>
 </head>
 <body>
