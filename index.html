@@ -157,7 +157,15 @@
     .cert-card { padding:var(--space-6); }
     .cert-label { display:inline-flex; padding:.4rem .7rem; border-radius:var(--radius-full); background:color-mix(in srgb, var(--color-primary) 16%, transparent); color:var(--color-primary); font-size:var(--text-xs); font-weight:700; margin-bottom:var(--space-4); }
     .tool-grid { display:grid; grid-template-columns:repeat(4, minmax(0,1fr)); gap:var(--space-4); }
-    .tool { padding:1rem 1.05rem; border:1px solid var(--color-border); border-radius:var(--radius-lg); background:var(--color-surface); color:var(--color-text-muted); font-size:var(--text-sm); }
+    .tool {
+  padding: 1rem 1.05rem;
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius-lg);
+  background: color-mix(in oklch, var(--color-primary) 10%, transparent);
+  color: var(--color-primary);
+  font-size: var(--text-sm);
+  font-weight: 500;
+}
     .contact-card { padding:var(--space-8); display:grid; grid-template-columns:1.1fr .9fr; gap:var(--space-6); align-items:center; }
     .contact-actions { display:flex; flex-wrap:wrap; gap:var(--space-3); margin-top:var(--space-5); }
     .contact-meta { display:grid; gap:var(--space-3); color:var(--color-text-muted); font-size:var(--text-sm); }
